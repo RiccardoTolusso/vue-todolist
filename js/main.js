@@ -43,6 +43,21 @@ const app = createApp({
         deleteToDo(id){
             console.log(this.toDoList[id])
             this.toDoList.splice(id, 1)
+        },
+        addToDo(event){
+            inputValue = event.target.parentElement.children[0].value;
+            if(inputValue.length < 5){
+                alert("Inserisci una parola di almeno 5 lettere")
+            }
+            else if(inputValue.length > 80){
+                alert("Inserisci al massimo 80 caratteri")
+            }
+            else {
+                this.toDoList.push({
+                    text: inputValue,
+                    done: false
+                })
+            }
         }
     }
 }).mount("#app")
