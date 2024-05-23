@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue ToDoList</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- /custom css -->
+</head>
+<body>
+    <div id="app" v-cloak>
+        <header>
+            
+        </header>
+        <main>
+            <div class="container">
+                <ul id="to-do-list" v-for="toDo in toDoList">
+                    <li :class="{'done': toDo.done}">{{ toDo.text }}</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- /vue.js -->
+    
+    <!-- custom js -->
+    <script src="./js/main.js"></script>
+    <!-- /custom js -->
+</body>
+</html>
