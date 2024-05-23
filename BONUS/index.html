@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue ToDoList</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- /custom css -->
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/c3f6cda4b5.js" crossorigin="anonymous"></script>
+    <!-- /font awesome -->
+</head>
+<body>
+    <div id="app" v-cloak>
+        <header>
+            <div class="container">
+                <input type="text" @keydown.enter="addToDo">
+                <button @click="addToDo">Aggiungi</button>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <!-- TO DO LIST -->
+                <ul id="to-do-list" v-for="(toDo, index) in toDoList">
+                    <li :class="{'done': toDo.done}" @click="invertDone(index)">
+                        {{ toDo.text }}
+                        <i class="fa-regular fa-circle-xmark" @click="deleteToDo(index)"></i>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div> 
+
+    <!-- vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- /vue.js -->
+    
+    <!-- custom js -->
+    <script src="./js/main.js"></script>
+    <!-- /custom js -->
+</body>
+</html>

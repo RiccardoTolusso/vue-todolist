@@ -1,0 +1,60 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* /RESET */
+
+
+/* VARIABLES */
+:root{
+    --primary-color:color:rgb(38, 38, 38);
+    --seconary-color:color: rgb(118, 118, 118);
+    --background-color:darkgrey; 
+}
+/* /VARIABLES */
+
+
+body{
+    background-color: var(--background-color);
+}
+
+/* MAIN */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.container #to-do-list{
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:var(--primary-color);
+}
+
+.container #to-do-list li{
+    position: relative;
+    margin-bottom: .625rem;
+}
+.container #to-do-list li.done{
+    text-decoration: line-through;
+    color: var(--seconary-color);
+}
+
+.container #to-do-list li i{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+}
+
+
+/* /MAIN */
+
+
+
+
