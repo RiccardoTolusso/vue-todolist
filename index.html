@@ -7,6 +7,10 @@
     <!-- custom css -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- /custom css -->
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/c3f6cda4b5.js" crossorigin="anonymous"></script>
+    <!-- /font awesome -->
 </head>
 <body>
     <div id="app" v-cloak>
@@ -15,8 +19,12 @@
         </header>
         <main>
             <div class="container">
-                <ul id="to-do-list" v-for="toDo in toDoList">
-                    <li :class="{'done': toDo.done}">{{ toDo.text }}</li>
+                <!-- TO DO LIST -->
+                <ul id="to-do-list" v-for="(toDo, index) in toDoList">
+                    <li :class="{'done': toDo.done}">
+                        {{ toDo.text }}
+                        <i class="fa-regular fa-circle-xmark" @click="deleteToDo(index)"></i>
+                    </li>
                 </ul>
             </div>
         </main>

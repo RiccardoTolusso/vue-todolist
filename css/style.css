@@ -24,6 +24,7 @@ body{
 .container {
     width: 80%;
     margin: 0 auto;
+    border: 1px solid black;
 }
 
 .container #to-do-list{
@@ -35,9 +36,20 @@ body{
     color:var(--primary-color);
 }
 
+.container #to-do-list li{
+    position: relative;
+    margin-bottom: .625rem;
+}
 .container #to-do-list li.done{
     text-decoration: line-through;
     color: var(--seconary-color);
+}
+
+.container #to-do-list li i{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
 }
 
 

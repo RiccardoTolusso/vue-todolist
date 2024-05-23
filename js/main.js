@@ -38,5 +38,11 @@ const app = createApp({
                 }
             ],
         }
+    },
+    methods:{
+        deleteToDo(id){
+            console.log(this.toDoList[id])
+            this.toDoList.splice(id, 1)
+        }
     }
 }).mount("#app")
