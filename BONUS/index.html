@@ -16,8 +16,10 @@
     <div id="app" v-cloak>
         <header>
             <div class="container">
-                <input type="text" @keydown.enter="addToDo">
-                <button @click="addToDo">Aggiungi</button>
+                <form action="" @submit.prevent="addToDo">
+                    <input type="text" >
+                    <button>Aggiungi</button>
+                </form>
             </div>
         </header>
         <main>

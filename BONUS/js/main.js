@@ -46,7 +46,7 @@ const app = createApp({
         },
         addToDo(event){
             console.log("ciao")
-            inputValue = event.target.parentElement.children[0].value;
+            inputValue = event.target.children[0].value;
             if(inputValue.length < 5){
                 alert("Inserisci una parola di almeno 5 lettere");
             }
@@ -58,7 +58,7 @@ const app = createApp({
                     text: inputValue,
                     done: false
                 })
-                event.target.parentElement.children[0].value = ""
+                event.target.children[0].value = ""
             }
         },
         invertDone(id){
